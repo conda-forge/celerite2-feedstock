@@ -1,5 +1,5 @@
 {% set name = "celerite2" %}
-{% set version = "0.0.2" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9f469b2ad42b6d47f7cbdf9242ee637c7ed3954a97175475b11e502846316145
+  sha256: 7ebfdf5792c23b50c88c46625f8e16043ca215111fff919cb006e8ac50acf88b
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Fast and scalable Gaussian Processes in 1D'
+  summary: Fast and scalable Gaussian Processes in 1D
   doc_url: https://celerite2.readthedocs.io
   dev_url: https://github.com/exoplanet-dev/celerite2
 
