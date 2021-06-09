@@ -26,10 +26,13 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
+    - pymc3 >=3.9,<3.12
+    - aesara-theano-fallback>=0.0.2
 
 test:
   imports:
     - celerite2
+    - celerite2.theano
 
 about:
   home: https://celerite2.readthedocs.io
