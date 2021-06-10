@@ -1,5 +1,5 @@
 {% set name = "celerite2" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7ebfdf5792c23b50c88c46625f8e16043ca215111fff919cb006e8ac50acf88b
+  sha256: 17b602018b7c06f631841c5a6e8be8c00447185641930655499d549f7c77d5ec
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - python
     - pip
     - numpy
-    - pybind11
+    - pybind11 >=2.4
     - setuptools_scm
   run:
     - python
@@ -43,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - dfm
+    - mwcraig
