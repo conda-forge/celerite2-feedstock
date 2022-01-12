@@ -1,5 +1,5 @@
 {% set name = "celerite2" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 17b602018b7c06f631841c5a6e8be8c00447185641930655499d549f7c77d5ec
+  sha256: 8d2af3a67a5ca19fcf13f4c09285f98ecfae90b60da8fb56e3f67ed2877fb913
 
 build:
   number: 0
