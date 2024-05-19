@@ -10,13 +10,14 @@ source:
   sha256: b6a7f5ca9403ae6640599bebaaafe2782b81a1653810b940f24a81988976f170
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
@@ -26,7 +27,6 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
